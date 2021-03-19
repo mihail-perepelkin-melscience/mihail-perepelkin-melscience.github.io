@@ -6,24 +6,24 @@ var questionaryButton = document.getElementById("questionaryButton");
 var testsJson = [
             {
                 question : "Вжарить по коленке",
-                file : "videos~/tests/0.mov"
+                file : "videos/tests/0.mov"
             }
             ];
 
 var questionsJson = [
             {
                 question : "Добрый день! Как Вас зовут?",
-                file : "videos~/questions/1.mov",
+                file : "videos/questions/1.mov",
                 answer : "Меня зовут Джон Смит"
             },
             {
                 question : "Сколько Вам лет?",
-                file : "videos~/questions/2.mov",
+                file : "videos/questions/2.mov",
                 answer : "52 года"
             },
             {
                 question : "Какой ваш рост?",
-                file : "videos~/questions/3.mov",
+                file : "videos/questions/3.mov",
                 answer : "172 см"
             }
             ];
@@ -93,7 +93,7 @@ function openTests() {
 
 function openQuestionary() {
     var questionary = document.getElementById("questionary");
-    questionary.innerHTML = "<img src='images~/01.png' width=600>";
+    questionary.innerHTML = "<img src='images/01.png' width=600>";
     if (questionary.style.display === "none") {
         questionary.style.display = "block";
     } else {
