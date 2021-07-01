@@ -15,17 +15,22 @@
 	<div id="error_log"></div>
 
 	<div class="content">
-		<button id="questionButton" onclick="openQuestions()" class="menuButton">Question</button>
-		<button id="testButton" onclick="openTests()" class="menuButton">Test</button>
-		<button id="questionaryButton" onclick="openQuestionary()" class="menuButton">Questionary</button>
-		<button id="answerButton" onclick="openAnswerDialog()" class="menuButton">Answer</button>
-	</div>
-        
-    <div id="questionsList" class="menuList"></div>
-    <div id="testsList" class="menuList"></div>
-    <div id="result"></div>
-    <div id="questionary"></div>
+		<label for="lightSlider">Light:</label>
+		<input id="lightSlider" oninput="setLightAmount()" type="range" min="1" max="100" value="50">
 
+		<label for="waterSlider">Water:</label>
+		<input id="waterSlider" oninput="setWaterAmount()" type="range" min="1" max="100" value="50">
+		
+		<input type="radio" id="Sand" name="groundType" value="1" onclick="setGroundType(1)" checked>
+  	<label for="sand">Sand</label>
+  	<input type="radio" id="Clay" name="groundType" value="2" onclick="setGroundType(2)">
+  	<label for="clay">Clay</label>
+  	<input type="radio" id="Peat" name="groundType" value="3" onclick="setGroundType(3)">
+  	<label for="peat">Peat</label>		
+
+		<button id="restartButton" onclick="restartSimulation()" class="menuButton">Restart</button>
+	</div>
+  
 	<canvas id="UT_CANVAS" tabindex="1" style='display:block; touch-action:none;'></canvas>
 
 	<script src="scripts/ui.js"></script>
