@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
-	<link rel="stylesheet" href="styles/styles.css">
+	<link rel="stylesheet" href="styles~/styles.css">
 </head>
 <div id="waitForManagedDebugger" style="display:none">
    <h1 style="text-align:center;">
@@ -16,24 +16,25 @@
 
 	<div class="content">
 		<label for="lightSlider">Light:</label>
-		<input id="lightSlider" oninput="setLightAmount()" type="range" min="1" max="100" value="50">
+		<input id="lightSlider" oninput="updateSimulationParameters()" type="range" min="1" max="100" value="100">
 
 		<label for="waterSlider">Water:</label>
-		<input id="waterSlider" oninput="setWaterAmount()" type="range" min="1" max="100" value="50">
+		<input id="waterSlider" oninput="updateSimulationParameters()" type="range" min="1" max="100" value="50">
 		
-		<input type="radio" id="Sand" name="groundType" value="1" onclick="setGroundType(1)" checked>
+		<input type="radio" id="Sand" name="groundType" value="1" onclick="updateSimulationParameters()" checked>
   	<label for="sand">Sand</label>
-  	<input type="radio" id="Clay" name="groundType" value="2" onclick="setGroundType(2)">
+  	<input type="radio" id="Clay" name="groundType" value="2" onclick="updateSimulationParameters()">
   	<label for="clay">Clay</label>
-  	<input type="radio" id="Peat" name="groundType" value="3" onclick="setGroundType(3)">
+  	<input type="radio" id="Peat" name="groundType" value="3" onclick="updateSimulationParameters()">
   	<label for="peat">Peat</label>		
 
-		<button id="restartButton" onclick="restartSimulation()" class="menuButton">Restart</button>
+  	<button id="playButton" onclick="playSimulation(1.0)" class="menuButton">Play</button>
+		<button id="restartButton" onclick="restartSimulation(0.0)" class="menuButton">Restart</button>
 	</div>
   
 	<canvas id="UT_CANVAS" tabindex="1" style='display:block; touch-action:none;'></canvas>
 
-	<script src="scripts/ui.js"></script>
+	<script src="scripts~/ui.js"></script>
 
 <script>
   var Module = {
